@@ -9,5 +9,11 @@ function error(response, message){
   response.json({error: message})
 }
 
+router.get("/questions", function (req, res) {
+  Question.findAll({order: "id"}).then(function (questions) {
+    res.json(questions);
+  });
+});
+
 
 module.exports = router;

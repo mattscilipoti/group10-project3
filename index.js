@@ -1,18 +1,20 @@
 var express = require('express');
 var app = express();
+// var path = require("path");
+// var bodyParser = require("body-parser");
 
 
 
 var questionsController = require("./app/controllers/questions");
 var answersController = require("./app/controllers/answers");
-=======
-var path = require("path");
-var bodyParser = require("body-parser");
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use("/", express.static(path.join(__dirname + "/app/assets")));
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use("/", express.static(path.join(__dirname + "/app/assets")));
 
+app.get("/", function(request, response){
+  response.sendFile(__dirname + "/app/views/index.html");
+});
 
 app.get("/", function (req, res) {
   res.send("ayyyyy")
