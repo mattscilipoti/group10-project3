@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Walter-0/group10-project3#readme",
   "dependencies": {
-    "express": "^4.13.3"
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "sequelize": "^3.6.0"
   }
 }
