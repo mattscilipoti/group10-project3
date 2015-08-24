@@ -1,5 +1,5 @@
 - As a user I should only be able to submit a question if I am logged in
 - As a user I should only be able to respond to a question if I am logged in
-- As a user I sould only be able to voete on a question if I am logged in
-- As a visitor to the webesite I should be able to read questions an aswer without logging in
-- As a visitor to the webbsite I should be abel to filter questions by categories
+- As a user I should only be able to voete on a question if I am logged in
+- As a visitor to the webesite I should be able to read questions and answers without logging in
+- As a visitor to the website I should be able to filter questions by categories
