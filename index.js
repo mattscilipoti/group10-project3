@@ -10,7 +10,7 @@ app.use("/", express.static(path.join(__dirname + "/app/assets")));
 
 
 app.get("/", function (req, res) {
-  res.send(sequelize)
+  res.sendFile(__dirname + "/app/views/index.html");
 })
 
 
