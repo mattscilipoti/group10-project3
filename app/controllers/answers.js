@@ -17,13 +17,13 @@ router.get("/answers", function(req, res){
 });
 
 router.get("/answers/:id", function(req, res){
-  Answer.findById(req.params.answerId).then(function(answer){
+  Answer.findById(req.params.id).then(function(answer){
     res.json(answer);
   });
 });
 
 router.put("/answers/:id", function(req, res){
-  Answer.findById(req.params.answerId).then(function(answer){
+  Answer.findById(req.params.id).then(function(answer){
     if(!answer) return error(res, "not found");
     answer.updateAttributes(req.body).then(function(answer){
       res.json(answer);
@@ -32,7 +32,7 @@ router.put("/answers/:id", function(req, res){
 });
 
 router.delete("/answers/:id", function(req, res){
-  Answer.findById(req.params.answerId).then(function(answer){
+  Answer.findById(req.params.id).then(function(answer){
     if(!answer) return error(res, "not found");
     answer.destroy().then(function(db_res){
       res.json(db_res);
