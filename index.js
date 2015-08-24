@@ -13,10 +13,9 @@ var questionsController = require("./app/controllers/questions");
 var answersController = require("./app/controllers/answers");
 
 
-app.get("/", function (req, res) {
-  res.send("ayyyyy")
-})
-
+app.get("/", function(request, response){
+  response.sendFile(__dirname + "/app/views/index.html");
+});
 
 app.use("/", questionsController);
 app.use("/", answersController);
