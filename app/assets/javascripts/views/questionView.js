@@ -14,5 +14,5 @@ QuestionView.prototype = {
     var html = $("<div>");
     html.append
 
-  };
+  }
 }

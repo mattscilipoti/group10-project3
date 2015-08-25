@@ -7,8 +7,8 @@ var Question = function (info) {
 
 Question.fetch = function(){
   var request = $.getJSON("http://localhost:3000/questions")
-  console.log("Get questions")
   .then(function(response) {
+    console.log(response);
     var questions = []
     for(var i = 0; i < response.length; i++){
       questions.push(new Question(response[i]))

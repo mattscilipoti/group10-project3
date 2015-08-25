@@ -10,7 +10,7 @@ var answersController = require("./app/controllers/answers");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use("/app/assets", express.static(path.join(__dirname + "/app/assets")));
+app.use("/", express.static(path.join(__dirname + "/app/assets")));
 app.set("view engine", "hbs")
 
 app.get("/", function(req, res){
