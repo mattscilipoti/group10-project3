@@ -1,4 +1,4 @@
-module.exports = function(sequelize, Sequelize){
+module.exports =  function(sequelize, Sequelize){
   return sequelize.define("question", {
     title: Sequelize.STRING,
     content: Sequelize.STRING,
