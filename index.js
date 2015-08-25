@@ -14,9 +14,6 @@ app.use("/", express.static(path.join(__dirname + "/app/assets")));
 app.set("view engine", "hbs")
 
 app.get("/", function(req, res){
-  // var questionModel = require("app/models/question.js")
-  // console.log("working?");
-  // var question = Questions;
   res.render("index", {})
 });
 

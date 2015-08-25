@@ -11,8 +11,8 @@ QuestionView.prototype = {
     });
   },
   render: function(){
-    var html = $("<div>");
-    html.append
+    var html = $(".question");
+    html.append(this.question.title)
 
   }
 }
