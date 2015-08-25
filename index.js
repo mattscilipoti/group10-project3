@@ -3,6 +3,7 @@ var app = express();
 var path = require("path");
 var bodyParser = require("body-parser");
 
+app.set("view engine", "hbs")
 
 
 var questionsController = require("./app/controllers/questions");
@@ -13,9 +14,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/", express.static(path.join(__dirname + "/app/assets")));
 
 app.get("/", function(req, res){
-  res.sendFile(__dirname + "/app/views/index.html");
+  var questionModel = require("../models/question.js")
+  console.log("working?");
+  var question = Questions;
+  res.render("index", question);
 });
-
 
 app.use("/", questionsController);
 app.use("/", answersController);
