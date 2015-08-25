@@ -1,7 +1,12 @@
 var DB = require("../config/connection")
 
+var User = DB.models.User
 var Question = DB.models.Question
 // var Answer = DB.models.Answer
+
+var users = [
+  {username:"TurtleAdmin", fullname:"GA Honcho Person", email:"honcho@generalassemb.ly", position:"student"},
+]
 
 var questions = [
   {title:"How do I create user authentication on my Express app?", content:"My group is building an Express app for WDI and related GA classes with user-submitted questions and answers. We want to implement user authentication, ideally tied to Github login info. What are our options?"},
@@ -17,10 +22,10 @@ var questions = [
 //   {content:"Check out <a href='http://passportjs.org/'>Passport.js</a>. Or go to Jesse's lesson on authentication Tuesday afternoon.", question_id: 1}
 // ]
 
-Question.bulkCreate(questions)
-// .then(function(){
-//   return Answer.bulkCreate(answers)
-// })
+User.bulkCreate(users)
+.then(function(){
+  return Question.bulkCreate(questions);
+})
 .then(function(){
   console.log("Seeded successfully! kthxbye");
   process.exit();

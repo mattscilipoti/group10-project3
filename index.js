@@ -3,8 +3,7 @@ var app = express();
 var path = require("path");
 var bodyParser = require("body-parser");
 
-
-
+var usersController = require("./app/controllers/users");
 var questionsController = require("./app/controllers/questions");
 var answersController = require("./app/controllers/answers");
 
@@ -17,6 +16,7 @@ app.get("/", function(req, res){
   res.render("index", {})
 });
 
+app.use("/", usersController);
 app.use("/", questionsController);
 app.use("/", answersController);
 
