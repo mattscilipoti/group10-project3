@@ -13,14 +13,29 @@ QuestionView.prototype = {
   render: function(){
     var html = $(".question");
     html.append("<li class='question_link' id='question_"+this.question.id+"'>" + this.question.title + "</li>");
-    // html.on('click', function(event) {
-    //
-    // });
-
-    /*
-     Best approach: Not put the HTML directly on the
-     Javascript code, and find out the way of
-      RENDER THE HANDLEBARS LAYOUT FROM HERE.
-    */
-  }
 }
+}
+
+//
+//
+// //   var htmlQuestion =("#question_form");
+// //   var questionForm =
+// //   htmlQuestion.append()
+// // },
+//
+//
+//
+//
+//
+//
+//     // html.on('click', function(event) {
+//     //
+//     // });
+//
+//     /*
+//      Best approach: Not put the HTML directly on the
+//      Javascript code, and find out the way of
+//       RENDER THE HANDLEBARS LAYOUT FROM HERE.
+//     */
+//   }
+// }
