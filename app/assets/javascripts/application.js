@@ -17,7 +17,7 @@ $("#question_form").hide();
   $("#ask_question").click(function(){
       $("#question_form").toggle();
 
-  });
+  })
 
   $("#answer_form").hide();
   $("#share_answer").click(function(){
