@@ -141,3 +141,88 @@ textarea {
   height: 2.2em;
   width: 12em;
 }
+
+/******************Question Show View******************/
+
+
+.question-title {
+  margin-left: 3.4em;
+  font-size: 36px;
+  font-family: Helvetica;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+.timestamp {
+  margin-bottom: 1em;
+  display: inline-block;
+  margin-left: 4em;
+  font-size: 24px;
+  font-family: Helvetica-Light;
+}
+
+.question-container {
+  margin: 0 3em;
+}
+
+.question-score {
+  display: inline;
+  float: left;
+  margin-right: 2.5em;
+  margin-bottom: 4em;
+}
+
+.question-content {
+  display: inline;
+  text-align: justify;
+  max-width: 24em;
+
+}
+
+.num-answers {
+  font-size: 32px;
+  font-family: Helvetica-Light;
+  margin-left: 3.7em;
+  margin-top: 1em;
+}
+
+.answer-container {
+  margin-left: 3em;
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+}
+
+.answer {
+}
+
+.answer-score {
+  float: left;
+  margin-right: 2.5em;
+  margin-bottom: 4em;
+}
+
+.answer-content {
+  text-align: justify;
+  font-family: Helvetica-Light;
+  font-size: 24px;
+}
+
+textarea#new-answer-content {
+  font-size: 24px;
+  margin-left: 5em;
+}
+
+input#submit {
+  margin-left: 1.3em;
+  background: #F6201D;
+  border: 1px solid #979797;
+  border-radius: 8px;
+  font-family: Helvetica-Light;
+  font-size: 32px;
+  color: #FFFFFF;
+  height: 2.2em;
+  width: 12em;
+
+}
