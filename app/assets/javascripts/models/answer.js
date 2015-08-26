@@ -5,3 +5,19 @@ var Answer = function(info){
   this.user_id = info.user_id;
   this.id = info.id
 }
+
+Answer.fetch = function(){
+  var request = $.getJSON("http://localhost:3000/answers")
+  .then(function(response) {
+    console.log(response);
+    var answers = []
+    for(var i = 0; i < response.length; i++){
+      answers.push(new Answer(response[i]))
+    }
+    return answers
+    })
+  .fail(function(response){
+      console.log("js failed to load")
+    })
+  return request
+}

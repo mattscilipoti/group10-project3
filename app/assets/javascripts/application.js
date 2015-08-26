@@ -6,6 +6,14 @@ $(document).ready(function () {
     })
   })
 
+  Answer.fetch().then(function (answers) {
+    answers.forEach(function (answer) {
+      var view = new AnswerView(answer)
+      view.render();
+    })
+  })
+
+
 
   //
   // console.log("ayy its ready");
