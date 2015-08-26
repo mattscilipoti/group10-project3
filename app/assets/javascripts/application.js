@@ -27,6 +27,8 @@ $("#question_form").hide();
  // 13 = enter key
 $(".search").on("keypress", function(event){
   if(event.keyCode == 13){
+    var searching = []
+
     alert("enter pressed")
   }
 });
