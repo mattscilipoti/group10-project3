@@ -6,6 +6,13 @@ var Answer = function(info){
   this.id = info.id
 }
 
+Answer.fetch().then(function (answers) {
+  answers.forEach(function (answer) {
+    var view = new AnswerView(answer)
+    view.render();
+  })
+})
+
 Answer.fetch = function(){
   var request = $.getJSON("http://localhost:3000/answers")
   .then(function(response) {
