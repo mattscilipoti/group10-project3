@@ -4,14 +4,9 @@ $(document).ready(function () {
       var view = new QuestionView(question)
       view.render();
     })
-  });
-
-  Answer.fetch().then(function (answers) {
-    answers.forEach(function (answer) {
-      var view = new AnswerView(answer)
-      view.render();
-    })
   })
+
+
 
 $("#question_form").hide();
   $("#ask_question").click(function(){
@@ -23,6 +18,7 @@ $("#question_form").hide();
   $("#share_answer").click(function(){
       $("#answer_form").toggle();
   });
+
 
  // 13 = enter key
 $(".search").on("keypress", function(event){

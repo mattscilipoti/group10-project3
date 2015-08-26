@@ -1,7 +1,12 @@
 var DB = require("../config/connection")
 
+var User = DB.models.User
 var Question = DB.models.Question
 var Answer = DB.models.Answer
+
+var users = [
+  {username:"TurtleAdmin", fullname:"GA Honcho Person", email:"honcho@generalassemb.ly", position:"student"},
+]
 
 var questions = [
   {title:"How do I create user authentication on my Express app?", content:"My group is building an Express app for WDI and related GA classes with user-submitted questions and answers. We want to implement user authentication, ideally tied to Github login info. What are our options?"},
@@ -20,14 +25,15 @@ var answers = [
   {content:"You don't need pseudoclasses because...", question_id: 4},
   {content:"The MVC fits into the framework...", question_id: 5},
   {content:"Handlebars help you when...", question_id: 6},
-    {content:"When rolling back changes on Github you should...", question_id: 7}
+  {content:"When rolling back changes on Github you should...", question_id: 7}
 ]
 
-Question.bulkCreate(questions)
+User.bulkCreate(users)
 .then(function(){
-  return Answer.bulkCreate(answers)
-})
-.then(function(){
-  console.log("Seeded successfully! kthxbye");
-  process.exit();
+  return Question.bulkCreate(questions).then(function(){
+    return Answer.bulkCreate(answers).then(function(){
+      console.log("Seeded successfully! kthxbye");
+      process.exit();
+    })
+  })
 });
