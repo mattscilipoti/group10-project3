@@ -12,9 +12,12 @@
   </head>
   <body>
 
-    <!-- Everything above is static -->
+  <!-- <div class="main">
+      <div class="main-header">
+        <div class="questions">Questions</div>
+        <div class="sort">Sort by: Newest/Votes</div>
+      </div>
 
-  <div class="main">
     <div class="entry">
       <div class="votes">3 votes</div>
       <div class="answers">8 answers</div>
@@ -43,7 +46,26 @@
       <div class="categories">express, javascript</div>
       <div class="date-user">asked 30 sec ago by javabro</div>
     </div>
-  </div>
+  </div> -->
+
+  <p class="new-question-header">
+    Ask a question
+  </p>
+
+  <form class="new-question" id="new-question">
+
+    <input type="text" placeholder="Title" name="title" id="title"> <br>
+
+    <textarea name="content" form="new-question" placeholder="What's your question?" id="content"></textarea> <br>
+
+    <input type="text" placeholder="Category (optional)" name="category" id="category"> <br>
+
+    <input type="submit" value="Submit" id="submit">
+  </form>
+
+
+
+
 
   </body>
 </html>
