@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var DB = require('../../config/connection');
+var User = DB.models.User;
 var Question = DB.models.Question;
 
 
@@ -14,20 +15,6 @@ function error(response, message){
 router.get("/questions", function (req, res) {
   Question.findAll({order: "id"}).then(function (questions) {
     res.json(questions);
-  });
-});
-
-//create a new question
-router.post("/questions", function (req, res) {
-  Question.create(req.body).then(function (question) {
-    res.json(question);
-  });
-});
-
-//show a question with id ":id"
-router.get("/questions/:id", function (req, res) {
-  Question.findById(req.params.id).then(function (question) {
-    res.json(question);
   });
 });
 
@@ -55,5 +42,25 @@ router.delete("/questions/:id", function (req, res) {
   });
 })
 
+//get questions from user
+router.get("/users/:userId/questions", function(req, res){
+  User.findById(req.params.questionId).then(function(user){
+    if(!user) return error(res, "not found");
+    return user.getQuestions();
+  }).then(function(questions){
+    res.json(questions);
+  })
+})
+
+
+//create a new question
+router.post("/users/:userId/questions", function (req, res) {
+  User.findById(req.params.userId).then(function(user){
+      if(!user) return error(res, "not found");
+      return user.createQuestion(req.body);
+  }).then(function(questions){
+    res.json(questions);
+  })
+});
 
 module.exports = router;
