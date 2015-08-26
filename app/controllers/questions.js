@@ -10,6 +10,7 @@ function error(response, message){
   response.json({error: message})
 }
 
+
 //index of questions
 router.get("/questions", function (req, res) {
   Question.findAll({order: "id"}).then(function (questions) {

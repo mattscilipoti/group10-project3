@@ -1,2 +1,66 @@
-<div class="question"></div>
-Hello, this is working.
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Turt.le</title>
+    <link rel="stylesheet" href="/stylesheets/application.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/javascripts/models/question.js"></script>
+    <script src="/javascripts/models/answer.js"></script>
+    <script src="/javascripts/views/questionView.js"></script>
+    <script src="/javascripts/views/answerView.js"></script>
+    <script src="/javascripts/application.js"></script>
+  </head>
+  <body>
+
+  <p class="new-question-header">
+    Ask a question
+  </p>
+
+  <form class="new-question" id="new-question">
+
+    <input type="text" placeholder="Title" name="title" id="title"> <br>
+
+    <textarea name="content" form="new-question" placeholder="What's your question?" id="content"></textarea> <br>
+
+    <input type="text" placeholder="Category (optional)" name="category" id="category"> <br>
+
+    <input type="submit" value="Submit" id="submit">
+  </form>
+
+
+
+
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+ <div class="question" ></div>
+
+
+<!-- <ul class="questions2">
+   {{#each question}}
+     <li>{{this}}</li>
+   {{/each}}
+ </ul> -->
+
+
+
+ <!--
+  <div class="question"></div>
+  <div class="answer"></div>
+
+  <ul class="questions">
+    {{#each question}}
+      <li>
+        {{this}}
+      </li>
+    {{/each}}
+  </ul> -->
