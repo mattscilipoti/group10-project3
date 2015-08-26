@@ -4,17 +4,20 @@ $(document).ready(function () {
       var view = new QuestionView(question)
       view.render();
     })
-  })
+  });
 
   Answer.fetch().then(function (answers) {
     answers.forEach(function (answer) {
       var view = new AnswerView(answer)
       view.render();
     })
-  })
+  });
 
-
-
+ // 13 = enter key
+$(".search").keypress(function(event){
+  if(event.which == 13)
+    alert("enter pressed");
+});
 
   //
   // console.log("ayy its ready");
