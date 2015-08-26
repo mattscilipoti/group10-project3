@@ -88,6 +88,7 @@ form.search input {
 
 .main-header>div {
   display: inline;
+  font-family: Helvetica-Light;
   font-size: 32px;
   margin: 0 0 0 10em;
 }

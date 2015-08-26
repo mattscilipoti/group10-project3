@@ -10,40 +10,58 @@
     <script src="/javascripts/views/answerView.js"></script>
     <script src="/javascripts/application.js"></script>
   </head>
+
   <body>
-
-
     <header><h1>Turt.le foo</h1></header>
     <div class='new_question'>
       <p id="ask_question">Ask a Question</p>
-      <div id="question_form">
-      <form method="post" action="/questions">
-      <h3><input type="text" name="title" placeholder="Title of Question"></h3>
-      <p><textarea name="content" placeholder="Explain your question i.e. what did you try, what did you expect"></textarea></p>
-      <h3><input type="text" name="category" placeholder="Tag"></h3>
-
-      <button type="submit">Submit</button>
-      </form>
-    </div>
-
+        <div id="question_form">
+        <form method="post" action="/questions">
+          <h3><input type="text" name="title" placeholder="Title of Question"></h3>
+          <p><textarea name="content" placeholder="Explain your question i.e. what did you try, what did you expect"></textarea></p>
+          <h3><input type="text" name="category" placeholder="Tag"></h3>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </div>
 
 
     <div class='new_answer'>
       <p id="share_answer">Answer</p>
       <div id="answer_form">
-      <form method="post" action="/answers">
-      <p><textarea name="content" placeholder="Provide a clear explanation"></textarea></p>
-      <h3><hidden= "question_id" ></h3>
+        <form method="post" action="/answers">
+          <p><textarea name="content" placeholder="Provide a clear explanation"></textarea></p>
+          <h3><hidden= "question_id" ></h3>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
 
-      <button type="submit">Submit</button>
+    <div class="banner">
+      <img class="header" src="images/header.png"/>
+      <h1 class="title">turt.le</h1>
+      <img class="logo" src="images/logo.png"/>
+      <p class="welcome">
+        <span style="font-size:32px">For when you get stuck on your back.</span> <br>
+        Ask a code-related question, get help from instructors, students, or TA's.<br>
+        Free until the heat death of the universe.
+      </p>
+    </div>
+
+    <nav>
+      <button type="button" class="ask-button" name="ask">Ask a Question</button>
+      <button type="button" class="categories-button" name="Categories">Categories</button>
+
+      <form class="search">
+        <input type="search" placeholder="Search..." name="search">
+        <input type="submit" style="visibility: hidden;" value="Submit">
       </form>
+    </nav>
+
+    <div class="main-header">
+      <div class="questions">Questions</div>
+      <div class="sort">Sort by: Newest/Votes</div>
     </div>
-
-    </div>
-
-
-
 
     {{{body}}}
   </body>
