@@ -14,11 +14,18 @@
 
     <header><h1>Turt.le foo</h1></header>
     <div class='new_question'>
-      <p id="question_form">Ask a Question</p>
+      <p id="ask_question">Ask a Question</p>
+      <div id="question_form">
+      <form method="post" action="/questions">
+      <h3><input type="text" name="title" placeholder="Title of Question"></h3>
+      <p><textarea name="content" placeholder="Explain your question i.e. what did you try, what did you expect"></textarea></p>
+      <h3><input type="text" name="category" placeholder="Tag"></h3>
 
+      <button type="submit">Submit</button>
+      </form>
     </div>
 
-    <header><h1>Turt.le foop</h1></header>
+    </div>
 
 
     {{{ body }}}

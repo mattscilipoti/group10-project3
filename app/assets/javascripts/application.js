@@ -13,6 +13,9 @@ $(document).ready(function () {
     })
   })
 
+  $("#ask_question").click(function(){
+      $("#question_form").toggle();
+  });
 
 
   //
