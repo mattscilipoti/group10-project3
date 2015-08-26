@@ -11,6 +11,17 @@ $(document).ready(function () {
       var view = new AnswerView(answer)
       view.render();
     })
+  })
+
+$("#question_form").hide();
+  $("#ask_question").click(function(){
+      $("#question_form").toggle();
+
+  })
+
+  $("#answer_form").hide();
+  $("#share_answer").click(function(){
+      $("#answer_form").toggle();
   });
 
  // 13 = enter key
