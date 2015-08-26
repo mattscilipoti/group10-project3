@@ -10,7 +10,7 @@ User.hasMany(Answer);
 Answer.belongsTo(Question);
 Question.hasMany(Answer);
 Answer.belongsTo(User);
-Answer.belongsTo(User);
+Question.belongsTo(User);
 
 
 module.exports = {
