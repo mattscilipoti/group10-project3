@@ -13,6 +13,25 @@ QuestionView.prototype = {
   render: function(){
     var html = $(".question");
     html.append("<li class='question_link' id='question_"+this.question.id+"'>" + this.question.title + "</li>");
+},
+
+render AskQuestion = (){
+  var htmlQuestion =("#question_form");
+  var questionForm =
+  htmlQuestion.append()
+},
+}
+
+    <form method="post" action="/">
+      <h3><input type="text" name="title" placeholder="Title of Question"></h3>
+      <p><textarea name="content"></textarea></p>
+      <button type="submit">Submit</button>
+    </form>
+
+
+
+
+
     // html.on('click', function(event) {
     //
     // });
