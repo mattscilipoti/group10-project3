@@ -25,7 +25,7 @@ $("#question_form").hide();
   });
 
  // 13 = enter key
-$(".search").on("keyUp", function(event){
+$(".search").on("keypress", function(event){
   if(event.keyCode == 13){
     alert("enter pressed")
   }
