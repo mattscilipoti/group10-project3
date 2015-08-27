@@ -97,8 +97,9 @@ form.search input {
 .entry>div {
   display: inline-block;
   font-size: 24px;
-  margin: 1em;
+  margin: 2em;
   max-width: 18em;
+
 }
 
 /***********New Question Page*********************/
@@ -152,7 +153,7 @@ textarea {
   font-weight: bold;
   display: inline-block;
   margin-bottom: 1em;
-  
+
 }
 
 .timestamp {
@@ -195,8 +196,6 @@ textarea {
   flex-direction: column;
 }
 
-.answer {
-}
 
 .answer-score {
   float: left;

@@ -14,9 +14,10 @@ $(document).ready(function () {
   })
 
  $(".question-content").hide();
- $("#question_form").hide();
+ $("#new-question").hide();
    $(".ask-button").click(function(){
-       $("#question_form").toggle();
+       $("#new-question").toggle();
+       $(".main").toggle();
    })
 
 

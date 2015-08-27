@@ -56,6 +56,7 @@ router.get("/users/:userId/questions", function(req, res){
 //create a new question
 router.post("/users/:userId/questions", function (req, res) {
   User.findById(req.params.userId).then(function(user){
+    
       if(!user) return error(res, "not found");
       return user.createQuestion(req.body);
   }).then(function(questions){

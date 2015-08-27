@@ -18,8 +18,8 @@ QuestionView.prototype = {
 
   render: function(){
     var content = this.question.content;
-    var questionsDiv = $(".question-title");
-    var qtitle = '<div id="qtitle' + this.question.id +'">' + this.question.title +'</div>';
+    var questionsDiv = $(".entry-title");
+    var qtitle = '<div id="pizza' + this.question.id +'">' + this.question.title +'</div>';
     var qid = this.question.id;
     questionsDiv.append(qtitle);
 
