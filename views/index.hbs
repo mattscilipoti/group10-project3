@@ -12,26 +12,26 @@
   <body>
 <!-- Index Page -->
   <div class="main">
-      <div class="main-header">
-        <div class="questions">Questions</div>
-        <div class="sort">Sort by: Newest/Votes</div>
-      </div>
-
-  <div class="entry-container">
-    <div class="entry">
-      <div class="votes"></div>
-      <div class="num-answers"></div>
-      <div class="question-title"></div>
-      <div class="categories"></div>
-      <div class="date-user"></div>
+    <div class="main-header">
+      <div class="questions">Questions</div>
+      <div class="sort">Sort by: Newest/Votes</div>
     </div>
-  </div>
+
+    <div class="entry-container">
+      <div class="entry">
+        <div class="votes"></div>
+        <div class="num-answers"></div>
+        <div class="entry-title"></div>
+        <div class="categories"></div>
+        <div class="date-user"></div>
+      </div>
+    </div>
 
   </div>
 
 <!-- New Question Page -->
 
-  <form class="new-question" id="new-question">
+  <form method="post" action="/questions" class="new-question" id="new-question">
     <p class="new-question-header">
       Ask a question
     </p>
