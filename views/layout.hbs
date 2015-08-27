@@ -28,6 +28,13 @@
 
     <nav>
       <button type="button" class="ask-button" name="ask">Ask a Question</button>
+      <form  id="question_form" method="post" action="/questions">
+      <input type="text" name="title" placeholder="Title of Question">
+      <textarea name="content" placeholder="Explain your question i.e. what did you try, what did you expect"></textarea>
+      <input type="text" name="category" placeholder="Tag">
+      <button type="submit">Submit</button>
+      </form>
+
       <button type="button" class="categories-button" name="Categories">Categories</button>
 
 
