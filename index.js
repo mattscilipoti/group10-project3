@@ -20,5 +20,9 @@ app.use("/", usersController);
 app.use("/", questionsController);
 app.use("/", answersController);
 
-var port = process.env.PORT || CONFIG.port;
-app.listen(port);
+// var port = process.env.PORT || CONFIG.port;
+// app.listen(port);
+
+app.listen(3000, function () {
+  console.log("listening on port 3000");
+});
