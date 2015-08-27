@@ -27,7 +27,7 @@ Answer.fetch = function(){
     $r = response;
     Answer.list = response;
     myAnswers = response;
-    console.log(response);
+    console.log();
     var answers = []
     for(var i = 0; i < response.length; i++){
       answers.push(new Answer(response[i]))

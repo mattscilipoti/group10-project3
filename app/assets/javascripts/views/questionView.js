@@ -1,10 +1,7 @@
-
-
 var QuestionView = function(question){
   this.question = question;
   this.$el = $("<div class='question '></div>");
 };
-
 QuestionView.prototype = {
   appendAnswers: function(answers, answersDiv){
 
@@ -17,33 +14,41 @@ QuestionView.prototype = {
   },
 
   render: function(){
-    var content = this.question.content;
-    var questionsDiv = $(".entry-title");
-    var qtitle = '<div id="pizza' + this.question.id +'">' + this.question.title +'</div>';
-    var qid = this.question.id;
-    questionsDiv.append(qtitle);
 
-    var qcontent = '<div id="qcontent"'+ qid + ' class="qcontent" style="display: none; font-solid: 13px; font-weight: normal">' + this.question.content + '</div>';
-    $('#qtitle' + this.question.id).append(qcontent);
-    var qans = '<div class="qans" style="display: none; font-solid: 13px; font-weight: normal"></div>'
-
-    var contentdiv = $('#qtitle' + this.question.id).find('.qcontent')[0];
-    var request = $.getJSON("http://localhost:3000/answers")
-    .then(function(response) {
-      myAnswers = response;
-      var ansdiv = $(contentdiv).find('.qans')[0];
-      if(ansdiv === undefined || ansdiv === null){
-        $(contentdiv).append('<br/>Ans: ' + myAnswers[qid].content);
-        // $(contentdiv).append( html for form ) //add form
-      }
-    });
-
-
-    $('#qtitle' + this.question.id).click(function(){
-      var contentdiv = $(this).find('.qcontent')[0];
-      $(contentdiv).toggle();
-
-    })
+    //var entryTitle = this.question.title;
+    //var content = this.question.content;
+    $("#entryTemplate").html();
+    var entryContainer = $(".entry-container");
+    //var entry = $(".entry")
+    var template = Handlebars.compile(this.template);
+    var context = this.question;
+    console.dir(context);
+    entryContainer.append($(template(context)));
+    // var questionsDiv = $(".entry-title");
+    // var qtitle = '<div class="entry-title"' + this.question.id +'>' + this.question.title +'</div>';
+    // var qid = this.question.id;
+    // questionsDiv.append(qtitle);
+    //
+    // var qcontent = '<div id="qcontent"'+ qid + ' class="qcontent" style="display: none; font-solid: 13px; font-weight: normal">' + this.question.content + '</div>';
+    // $('#qtitle' + this.question.id).append(qcontent);
+    // var qans = '<div class="qans" style="display: none; font-solid: 13px; font-weight: normal"></div>'
+    //
+    // var contentdiv = $('#qtitle' + this.question.id).find('.qcontent')[0];
+    // var request = $.getJSON("http://localhost:3000/answers")
+    // .then(function(response) {
+    //   myAnswers = response;
+    //   var ansdiv = $(contentdiv).find('.qans')[0];
+    //   if(ansdiv === undefined || ansdiv === null){
+    //     $(contentdiv).append('<br/>Ans: ' + myAnswers[qid].content);
+    //     // $(contentdiv).append( html for form ) //add form
+    //   }
+    // });
+    //
+    //
+    // $('#qtitle' + this.question.id).click(function(){
+    //   var contentdiv = $(this).find('.qcontent')[0];
+    //   $(contentdiv).toggle();
+    // })
 
 
 

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  QuestionView.prototype.template = $("#entryTemplate").html();
   Question.fetch().then(function (questions) {
     questions.forEach(function (question) {
       var view = new QuestionView(question)
@@ -14,11 +15,18 @@ $(document).ready(function () {
   })
 
  $(".question-content").hide();
+
  $("#new-question").hide();
-   $(".ask-button").click(function(){
-       $("#new-question").toggle();
-       $(".main").toggle();
-   })
+
+ $(".ask-button").click(function(){
+     $("#new-question").toggle();
+     $(".main").toggle();
+ })
+
+ $(".entry").on("click", function(){
+   $(".main").hide();
+   console.log("hiii");
+ })
 
 
   $("#new-answer").hide();

@@ -18,6 +18,8 @@ router.get("/questions", function (req, res) {
   });
 });
 
+//get a question with id "id"
+
 //update a question with id ":id"
 router.put("/questions/:id", function (req, res) {
   Question.findById(req.params.id)
@@ -43,14 +45,14 @@ router.delete("/questions/:id", function (req, res) {
 })
 
 //get questions from user
-router.get("/users/:userId/questions", function(req, res){
-  User.findById(req.params.questionId).then(function(user){
-    if(!user) return error(res, "not found");
-    return user.getQuestions();
-  }).then(function(questions){
-    res.json(questions);
-  })
-})
+// router.get("/users/:userId/questions", function(req, res){
+//   User.findById(req.params.questionId).then(function(user){
+//     if(!user) return error(res, "not found");
+//     return user.getQuestions();
+//   }).then(function(questions){
+//     res.json(questions);
+//   })
+// })
 
 
 //create a new question
