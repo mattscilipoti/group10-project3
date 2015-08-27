@@ -19,8 +19,8 @@ var questions = [
 ]
 
 var answers = [
-  {content:"Check out <a href='http://passportjs.org/'>Passport.js</a>. Or go to Jesse's lesson on authentication Tuesday afternoon.", question_id: 1},
-  {content:"Great question..the difference between Expess and Sinatra is ....", question_id: 2},
+  {content:"Check out <a href='http://passportjs.org/'>Passport.js</a>. Or go to Jesse's lesson on authentication Tuesday afternoon.", questionId: 1},
+  {content:"Great question..the difference between Expess and Sinatra is ....", questionId: 2},
   {content:"You should nest the box by doing ....", question_id: 3},
   {content:"You don't need pseudoclasses because...", question_id: 4},
   {content:"The MVC fits into the framework...", question_id: 5},
