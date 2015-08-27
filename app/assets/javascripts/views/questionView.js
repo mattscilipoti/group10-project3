@@ -31,12 +31,10 @@ QuestionView.prototype = {
     var request = $.getJSON("http://localhost:3000/answers")
     .then(function(response) {
       myAnswers = response;
-      console.log(myAnswers[qid]);
       var ansdiv = $(contentdiv).find('.qans')[0];
-      console.log(ansdiv);
       if(ansdiv === undefined || ansdiv === null){
         $(contentdiv).append('<br/>Ans: ' + myAnswers[qid].content);
-        // $(contentdiv).append( html for form ) //add form 
+        // $(contentdiv).append( html for form ) //add form
       }
     });
 
