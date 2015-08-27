@@ -5,9 +5,12 @@ var Question = function (info) {
   this.id = info.id;
 }
 
+var $q = null;
+
 Question.fetch = function(){
   var request = $.getJSON("http://localhost:3000/questions")
   .then(function(response) {
+    $q = response;
     var questions = []
     for(var i = 0; i < response.length; i++){
       questions.push(new Question(response[i]))
