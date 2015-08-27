@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  QuestionView.prototype.template = $("#entryTemplate").html();
   Question.fetch().then(function (questions) {
     questions.forEach(function (question) {
       var view = new QuestionView(question)

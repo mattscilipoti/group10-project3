@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+app.set("view engine", "jade");
 var path = require("path");
 var bodyParser = require("body-parser");
 
@@ -13,7 +14,8 @@ app.use("/", express.static(path.join(__dirname + "/app/assets")));
 app.set("view engine", "hbs")
 
 app.get("/", function(req, res){
-  res.render("index", {})
+
+  res.render("index")
 });
 
 app.use("/", usersController);
