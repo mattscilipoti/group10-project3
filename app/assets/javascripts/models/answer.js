@@ -1,3 +1,6 @@
+var myAnswers;
+
+
 var Answer = function(info){
   this.content = info.content;
   this.score = info.score;
@@ -13,6 +16,9 @@ var $r = null
 //     var view = new AnswerView(answer)
 //     view.render();
 //   })
+
+
+
 // })
 Answer.list = null
 Answer.fetch = function(){
@@ -20,6 +26,7 @@ Answer.fetch = function(){
   .then(function(response) {
     $r = response;
     Answer.list = response;
+    myAnswers = response;
     console.log(response);
     var answers = []
     for(var i = 0; i < response.length; i++){

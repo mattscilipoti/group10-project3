@@ -1,3 +1,5 @@
+
+
 var AnswerView = function(answer){
   this.answer = answer;
   this.$el = $("<div class='answer'></div>"); //not using
@@ -9,7 +11,7 @@ AnswerView.prototype = {
       var question_id = this.answer.question_id;
       var answerElementId = "question_"+question_id+"_answer";
       var el = $("<p id='"+answerElementId+"' style='display: none;'>" + this.answer.content + "</p>");
-    
+
 
       var questionElementId = "question_" + question_id;
       var questionHtml = $('#' + questionElementId);
