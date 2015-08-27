@@ -1,3 +1,6 @@
+var myAnswers;
+
+
 var Answer = function(info){
   this.content = info.content;
   this.score = info.score;
@@ -6,16 +9,24 @@ var Answer = function(info){
   this.id = info.id
 }
 
-Answer.fetch().then(function (answers) {
-  answers.forEach(function (answer) {
-    var view = new AnswerView(answer)
-    view.render();
-  })
-})
+var $r = null
 
+// Answer.fetch().then(function (answers) {
+//   answers.forEach(function (answer) {
+//     var view = new AnswerView(answer)
+//     view.render();
+//   })
+
+
+
+// })
+Answer.list = null
 Answer.fetch = function(){
   var request = $.getJSON("http://localhost:3000/answers")
   .then(function(response) {
+    $r = response;
+    Answer.list = response;
+    myAnswers = response;
     console.log(response);
     var answers = []
     for(var i = 0; i < response.length; i++){
