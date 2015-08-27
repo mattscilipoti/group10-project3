@@ -15,11 +15,18 @@ $(document).ready(function () {
   })
 
  $(".question-content").hide();
+
  $("#new-question").hide();
-   $(".ask-button").click(function(){
-       $("#new-question").toggle();
-       $(".main").toggle();
-   })
+
+ $(".ask-button").click(function(){
+     $("#new-question").toggle();
+     $(".main").toggle();
+ })
+
+ $(".entry").on("click", function(){
+   $(".main").hide();
+   console.log("hiii");
+ })
 
 
   $("#new-answer").hide();
