@@ -14,23 +14,22 @@ $(document).ready(function () {
     })
   })
 
- $(".question-content").hide();
+  $("#new-answer").hide();
+  //event listener for each entry
+  $(document).on('click','.entry',function(event){
+    $(event.target).siblings().toggle();
+    $(".entry-title").toggleClass("question-title")
+    $(".question-content").toggle();
+    $("#new-answer").toggle();
+  });
 
- $("#new-question").hide();
+  $("#new-question").hide();
 
- $(".ask-button").click(function(){
+  //ask a question button
+ $(".ask-button").on("click",function(){
      $("#new-question").toggle();
      $(".main").toggle();
- })
-
- $(".entry").on("click", function(){
-   $(".main").hide();
-   console.log("hiii");
- })
+ });
 
 
-  $("#new-answer").hide();
-  $("#share_answer").click(function(){
-      $("#answer_form").toggle();
-  });
 })

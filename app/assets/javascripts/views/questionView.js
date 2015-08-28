@@ -19,7 +19,8 @@ QuestionView.prototype = {
     //var content = this.question.content;
     $("#entryTemplate").html();
     var entryContainer = $(".entry-container");
-    //var entry = $(".entry")
+    var entry = $(".entry")
+    var questionContent = $(".question-content")
     var template = Handlebars.compile(this.template);
     var context = this.question;
     console.dir(context);
