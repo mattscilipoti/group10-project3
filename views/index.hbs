@@ -20,12 +20,12 @@
     <div class="entry-container">
       <script id="entryTemplate" type="text/x-handlebars-template">
 
-        <div class="entry" id="entry-\{{id}}">
+        <div class="entry" id="entry-\{{id}}" data-id="\{{id}}">
           <div class="votes"></div>
           <div class="num-answers"></div>
           <div class="entry-title">\{{title}}</div>
           <div class="categories">\{{category}}</div>
-          <!-- <p class="question-content">some dummy content</p> -->
+          <p class="question-content">\{{content}}</p>
           <div class="date-user"></div>
         </div>
       </script>
@@ -75,8 +75,10 @@
 </div>
 
 
-<form method="post" action="/answers" class="new-answer" id="new-answer">
+
+<form method="post" action="/answers/questionId" class="new-answer" id="new-answer">
   <textarea name="content" form="new-answer" placeholder="Add your answer" id="new-answer-content" rows="8" cols="90"></textarea>
   <input type="submit" value="Submit" id="submit">
-  <input type="hidden" name="question" value="\{{id}}">
+  <input type="hidden" name="question-id" value="questionId">
+
 </form>

@@ -15,14 +15,17 @@ $(document).ready(function () {
   })
 
   $("#new-answer").hide();
-  $(".question-content").hide();
 
   //event listener for each entry
   $(document).on('click','.entry',function(event){
-    $(event.target).siblings().toggle();
+    $(this).siblings().toggle();
     $(".entry-title").toggleClass("question-title")
     $(".question-content").toggle();
-    $("#new-answer").toggle();
+    // use $('selector).data() to get the id
+    var questionId = $(this).data('id');
+    console.log(questionId);
+    // use jquery to modify the form, to use that id in the action
+    $("#new-answer").toggle().attr('action', '/answers/' + questionId);
   });
 
   $("#new-question").hide();

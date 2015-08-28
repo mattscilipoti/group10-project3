@@ -179,6 +179,7 @@ textarea {
 .question-content {
   margin-left: 10em;
   display: block;
+  display: none;
   text-align: justify;
   max-width: 24em;
   line-height: 1.5em;

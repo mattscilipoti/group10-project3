@@ -59,7 +59,8 @@ router.post("/answers/:questionId", function(req, res){
     return question.createAnswer(req.body);
   })
   .then(function(answers){
-    res.json(answers);
+    res.redirect('/');
+
   });
 });
 
