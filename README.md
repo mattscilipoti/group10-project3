@@ -30,8 +30,8 @@ $ nodemon index.js
 ###Authors
 -Jeremy Koulish: https://github.com/jkoul
 -Lisa Scott: https://github.com/lscottcook
--Yvonne Wang: https://github.com/YvonneWang
 -Walter Augustine: https://github.com/Walter-0
+-Yvonne Wang: https://github.com/YvonneWang
 
 ###Technologies Used
 * Node.js
