@@ -52,7 +52,7 @@ router.get("/questions/:questionId/answers", function(req, res){
   });
 });
 
-router.post("/questions/:questionId/answers", function(req, res){
+router.post("/answers/:questionId", function(req, res){
   Question.findById(req.params.questionId)
   .then(function(question){
     if(!question) return error(res, "not found");

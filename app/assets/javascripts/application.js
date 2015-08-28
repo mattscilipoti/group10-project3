@@ -14,20 +14,27 @@ $(document).ready(function () {
     })
   })
 
- $(".question-content").hide();
+  $("#new-answer").hide();
+  $(".question-content").hide();
 
- $("#new-question").hide();
+  //event listener for each entry
+  $(document).on('click','.entry',function(event){
+    $(event.target).siblings().toggle();
+    $(".entry-title").toggleClass("question-title")
+    $(".question-content").toggle();
+    $("#new-answer").toggle();
+  });
 
- $(".ask-button").click(function(){
+  $("#new-question").hide();
+
+  //ask a question button
+ $(".ask-button").on("click",function(){
      $("#new-question").toggle();
      $(".main").toggle();
- })
+ });
 
- $(".entry").on("click", function(){
-   $(".main").hide();
-   console.log("hiii");
- })
 
+<<<<<<< HEAD
 
   $("#new-answer").hide();
   $("#share_answer").click(function(){
@@ -119,4 +126,6 @@ $(".search").on("keypress", function(event){
   //
   // })
 
+=======
+>>>>>>> d65b960a0f7c2025058edcbcac77be48d85b4f80
 })

@@ -93,6 +93,9 @@ form.search input {
   margin: 0 0 0 10em;
 }
 
+.entry {
+  border: 1px solid black;
+}
 
 .entry>div {
   display: inline-block;
@@ -165,7 +168,6 @@ textarea {
 }
 
 .question-container {
-  margin: 0 3em;
 }
 
 .question-score {
@@ -176,9 +178,11 @@ textarea {
 }
 
 .question-content {
-  display: inline;
+  margin-left: 10em;
+  display: block;
   text-align: justify;
   max-width: 24em;
+  line-height: 1.5em;
 
 }
 

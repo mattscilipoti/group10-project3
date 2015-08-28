@@ -52,11 +52,12 @@
     <div class="entry-container">
       <script id="entryTemplate" type="text/x-handlebars-template">
 
-        <div class="entry">
+        <div class="entry" id="entry-\{{id}}">
           <div class="votes"></div>
           <div class="num-answers"></div>
           <div class="entry-title">\{{title}}</div>
           <div class="categories">\{{category}}</div>
+          <!-- <p class="question-content">some dummy content</p> -->
           <div class="date-user"></div>
         </div>
       </script>
@@ -89,10 +90,7 @@
 <div class="timestamp">
 </div>
 
-<div class="question-container">
-  <img class="question-score" src="images/score.png"/>
-  <p class="question-content"></p>
-</div>
+
 
 <div class="num-answers">
   2 answers
@@ -109,11 +107,8 @@
 </div>
 
 
-<form class="new-answer" id="new-answer">
+<form method="post" action="/answers" class="new-answer" id="new-answer">
   <textarea name="content" form="new-answer" placeholder="Add your answer" id="new-answer-content" rows="8" cols="90"></textarea>
   <input type="submit" value="Submit" id="submit">
+  <input type="hidden" name="question" value="\{{id}}">
 </form>
-
-<!--
-  </body>
-</html> -->
