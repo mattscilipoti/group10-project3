@@ -15,6 +15,8 @@ $(document).ready(function () {
   })
 
   $("#new-answer").hide();
+  $(".question-content").hide();
+
   //event listener for each entry
   $(document).on('click','.entry',function(event){
     $(event.target).siblings().toggle();
