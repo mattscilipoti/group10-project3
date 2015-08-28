@@ -22,5 +22,8 @@ app.use("/", usersController);
 app.use("/", questionsController);
 app.use("/", answersController);
 
+
+
 var port = process.env.PORT || 3000;
+console.log("working!")
 app.listen(port);
